@@ -4,7 +4,6 @@ from typing import List, Optional
 
 from pydantic import BaseModel, Field
 
-# 确保这个类名是 Menu
 class Menu(BaseModel):
     id: UUID = Field(default_factory=uuid4, description="The unique identifier for the menu.")
     menu_date: date = Field(..., description="The date of this menu.")
@@ -24,4 +23,5 @@ class Menu(BaseModel):
                 "open_hours": "11:00 AM - 2:00 PM"
             }
         }
+
     }
